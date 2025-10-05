@@ -1,0 +1,6 @@
+grade_id,nome,hex,val_r,val_g,val_b
+"1",Densa,#ec4147,"236","65","71"
+"2",Pouco Densa,#fb9a99,"251","154","153"
+"3",Loteamento Vazio,#ff00ff,"255","0","255"
+"4",Área Urbanizada,#ff0000,"255","0","0"
+"5",Área Não Urbanizada,#525252,"82","82","82"

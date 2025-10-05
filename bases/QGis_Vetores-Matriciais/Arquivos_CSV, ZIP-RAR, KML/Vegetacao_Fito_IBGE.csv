@@ -1,0 +1,14 @@
+id,nome,grade_id,hex,val_cor_r,val_cor_g,val_cor_b
+"1",Floresta Ombrófila Densa,1,#A8FF00,168,255,0
+"2",Floresta Ombrófila Aberta,2,#D6FFA8,214,255,168
+"3",Floresta Ombrófila Mista,3,#99CBC2,153,203,194
+"4",Floresta Estacional Sempre-Verde,4,#9CCD89,156,205,137
+"5",Floresta Estacional Semidecidual,5,#E6E699,230,230,153
+"6",Floresta Estacional Decidual,6,#CDCD89,205,205,137
+"7",Campinarana,7,#A8EBFF,168,235,255
+"8",Savana,8,#FFEBA8,255,235,168
+"9",Savana-Estépica,9,#F5F500,245,245,0
+"10",Estepe,10,#E6AE99,230,174,153
+"11",Formação Pioneira,11,#A8D6FF,168,214,255
+"12",Contato (Ecótono e Encrave),12,#E69800,230,152,0
+"13",Corpo d'água continental,13,#00C5FF,0,197,255

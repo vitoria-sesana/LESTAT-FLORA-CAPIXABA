@@ -1,0 +1,55 @@
+id,nome,grade_id,hex,val_cor_r,val_cor_g,val_cor_b
+"1",Da - Floresta Ombrófila Densa Aluvial,1,#a8ff00,168,255,0
+"2",Db - Floresta Ombrófila Densa das Terras Baixas,2,#73FF00,115,255,0
+"3",Ds - Floresta Ombrófila Densa Submontana,3,#00f500,0,245,0
+"4",Dm - Floresta Ombrófila Densa Montana,4,#00ff73,0,255,115
+"5",Dl - Floresta Ombrófila Densa Alto-Montana,5,#00CD00,0,205,0
+"6",Aa - Floresta Ombrófila Aberta Aluvial,6,#d6ffa8,214,255,168
+"7",Ab - Floresta Ombrófila Aberta das Terras Baixas,7,#c0ffa8,192,255,168
+"8",As - Floresta Ombrófila Aberta Submontana,8,#a8ffa8,168,255,168
+"9",Mm - Floresta Ombrófila Mista Montana,9,#99D4E6,153,212,230
+"10",Ml - Floresta Ombrófila Mista Alto-Montana,10,#99C2E6,153,194,230
+"11",Ha - Floresta Estacional Sempre Verde Aluvial,11,#9ccd89,156,205,137
+"12",Hb - Floresta Estacional Sempre Verde das Terras Baixas,12,#51a800,81,168,0
+"13",Hs - Floresta Estacional Sempre Verde Submontana,13,#007e00,0,126,0
+"14",Fa - Floresta Estacional Semidecidual Aluvial,14,#e6e699,230,230,153
+"15",Fb - Floresta Estacional Semidecidual das Terras Baixas,15,#D4E699,212,230,153
+"16",Fs - Floresta Estacional Semidecidual Submontana,16,#c2e699,194,230,153
+"17",Fm - Floresta Estacional Semidecidual Montana,17,#BECD89,190,205,137
+"18",Ca - Floresta Estacional Decidual Aluvial,18,#CDCD89,205,205,137
+"19",Cb - Floresta Estacional Decidual das Terras Baixas,19,#CDBE89,205,190,137
+"20",Cs - Floresta Estacional Decidual Submontana,20,#a8a873,168,168,115
+"21",Cm - Floresta Estacional Decidual Montana,21,#8FA873,143,168,115
+"22",Ld - Campinarana Florestada,22,#89cdcd,137,205,205
+"23",La - Campinarana Arborizada,23,#a8ffc0,168,255,192
+"24",Lb - Campinarana Arbustiva,24,#a8ffeb,168,255,235
+"25",Lg - Campinarana Gramíneo-Lenhosa,25,#a8ebff,168,235,255
+"26",Sd - Savana Florestada,26,#ffa8a8,255,168,168
+"27",Sa - Savana Arborizada,27,#ffc0a8,255,192,168
+"28",Sp - Savana Parque,28,#ffd6a8,255,214,168
+"29",Sg - Savana Gramíneo-Lenhosa,29,#ffeba8,255,235,168
+"30",Td - Savana-Estépica Florestada,30,#cdcd00,205,205,0
+"31",Ta - Savana-Estépica Arborizada,31,#E6C200,230,194,0
+"32",Tb - Savana-Estépica Arbustiva,32,#fcbc7d,252,188,125
+"33",Tp - Savana-Estépica Parque,33,#FFD600,255,214,0
+"34",Tg - Savana-Estépica Gramíneo-Lenhosa,34,#F5F500,245,245,0
+"35",Ea - Estepe Arborizada,35,#E6D499,230,212,153
+"36",Ep - Estepe Parque,36,#E6C299,230,194,153
+"37",Eg - Estepe Gramíneo-Lenhosa,37,#E6AE99,230,174,153
+"38",Pm - Formação Pioneira com influência marinha,38,#00FFD6,0,255,214
+"39",Pf - Formação Pioneira com influência fluviomarinha,39,#00D6FF,0,214,255
+"40",Pa - Formação Pioneira com influência fluvial e/ou lacustre,40,#A8D6FF,168,214,255
+"41",rs - Refúgio Vegetacional Submontano,41,#FF0073,255,0,115
+"42",rm - Refúgio Vegetacional Montano,42,#ffa8ff,255,168,255
+"43",rl - Refúgio Vegetacional Alto-Montano,43,#FFA8D6,255,168,214
+"44",Ac - Agricultura,44,#e9e9e9,233,233,233
+"45",Ag - Agropecuária,45,#e9e9e9,233,233,233
+"46",Ap - Pecuária (pastagens),46,#e9e9e9,233,233,233
+"47",Ai - Indiscriminada,47,#B2B2B2,178,178,178
+"48",Iu - Influência urbana,48,#B2B2B2,178,178,178
+"49",Vs - Vegetação Secundária,49,#0073e1,0,115,225
+"50",R - Florestamento/Reflorestamento,50,#8f00a8,143,0,168
+"51",Contato (Ecótono),51,#e39e00,227,158,0
+"52",Ar - Afloramento Rochoso,52,#C0A8FF,192,168,255
+"53",Dn - Dunas,53,#FFFF00,255,255,0
+"54",Corpo d'água continental,54,#73FFF7,115,255,247

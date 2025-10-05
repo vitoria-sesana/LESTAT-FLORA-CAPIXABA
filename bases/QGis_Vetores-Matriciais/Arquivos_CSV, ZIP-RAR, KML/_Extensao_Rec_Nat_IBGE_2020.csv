@@ -1,0 +1,5 @@
+grade_id,nome,hex,val_r,val_g,val_b
+2,Áreas naturais não florestais,#bfbf00,191,191,0
+3,Áreas antropizadas,#ffebaf,255,235,175
+4,Corpos d'água,#e3fdff,227,253,255
+1,Áreas naturais florestais,#808000,128,128,0
