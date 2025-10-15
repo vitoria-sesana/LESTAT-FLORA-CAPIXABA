@@ -1,0 +1,8 @@
+--------- COLETA DOS DADOS-------------
+Feita pelo link: https://regions.sibbr.gov.br/regions
+Foi feito o seguinte passo a passo:
+1) Filtro pelo Estado Espírito Santo
+2) Clicar no botão "Espírito Santo" acima do mapa
+3) Seleção do Reino Plantae
+4) Clicar no botão "Ver registros"
+5) Por fim, baixar usando a opção "Todos os registros"
