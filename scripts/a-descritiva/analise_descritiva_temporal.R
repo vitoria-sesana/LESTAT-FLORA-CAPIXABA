@@ -4,7 +4,7 @@ library(dplyr)
 library(ggplot2)
 
 # leitura --------------------------------------------------------------------
-caminho <- "data/reino_plantae_es/base_filtrada.parquet"
+caminho <- "outputs/reino_plantae_es/base_filtrada.parquet"
 
 base_flora <- arrow::read_parquet(caminho)
 
@@ -99,6 +99,18 @@ resultados_anuais_filo <- resultados_anuais_filo %>%
   mutate(decada_num = as.numeric(stringr::str_remove(year, "s")))
 
 ggplot(resultados_anuais_filo, aes(x = decada_num, y = n, color = phylum)) +
+  geom_line(size = 1.2) +
+  geom_point() +
+  labs(title = "Evolução por década e por phylum",
+       x = "Década",
+       y = "Quantidade (n)",
+       color = "Phylum") +
+  theme_minimal()
+
+# sem o filo que mais aparece
+resultados_anuais_filo %>% 
+  filter(phylum != "Tracheophyta") %>% 
+  ggplot( aes(x = decada_num, y = n, color = phylum)) +
   geom_line(size = 1.2) +
   geom_point() +
   labs(title = "Evolução por década e por phylum",
