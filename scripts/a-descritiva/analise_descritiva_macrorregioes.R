@@ -46,75 +46,77 @@ base_flora_tratada$name_muni %>% is.na %>% table()
 
 # gráficos ----------------------------------------------------------------
 
-quantidade_registros_municipais <- 
+quantidade_registros_municipais_geo  <- 
   base_flora_tratada %>% 
-  group_by(code_muni) %>% 
+  group_by(name_muni) %>% 
   summarise( n = n()) %>% 
   na.omit() %>% 
-  mutate(percentual = n / sum(n) * 100)
+  mutate(percentual = round(n / sum(n) * 100,2))
+
+quantidade_registros_municipais <-
+  quantidade_registros_municipais_geo %>% 
+  as_tibble() %>% 
+  select(name_muni, n, percentual)
 
 
-ggplot() +
-  geom_sf(data = quantidade_registros_municipais, aes(fill = percentual), color = "white", size = 0.2, na.rm = FALSE) +
-  coord_sf(xlim = c(-42,-39.5)) +
-  labs(title = "", 
-       size=8) +
-  scale_fill_distiller(palette = "Reds",
-                       name="Ipa Urb m2",
-                       direction = 1, 
-                       na.value = "white") +
-  theme(panel.border = element_rect(colour = "black", fill=NA, size=0.4), 
-        panel.background = element_rect(fill = '#E5E5E5'),
-        legend.margin = margin(r=2,l=2,t=2,b=2),
-        legend.position = c(0.85,0.2),
-        legend.background = element_rect(size=0.1, linetype="solid", 
-                                         colour ="black"))
+# ggplot() +
+#   geom_sf(data = quantidade_registros_municipais, aes(fill = percentual), color = "white", size = 0.2, na.rm = FALSE) +
+#   coord_sf(xlim = c(-42,-39.5)) +
+#   labs(title = "", 
+#        size=8) +
+#   scale_fill_distiller(palette = "Reds",
+#                        name="Ipa Urb m2",
+#                        direction = 1, 
+#                        na.value = "white") +
+#   theme(panel.border = element_rect(colour = "black", fill=NA, size=0.4), 
+#         panel.background = element_rect(fill = '#E5E5E5'),
+#         legend.margin = margin(r=2,l=2,t=2,b=2),
+#         legend.position = c(0.85,0.2),
+#         legend.background = element_rect(size=0.1, linetype="solid", 
+#                                          colour ="black"))
 
-library(ggplot2)
-library(sf)
+# # Verifique o bbox se quiser ajustar visualmente
+# st_bbox(quantidade_registros_municipais)
 
-# Verifique o bbox se quiser ajustar visualmente
-st_bbox(quantidade_registros_municipais)
-
-# Mapa ajustado
-ggplot() +
-  geom_sf(data = quantidade_registros_municipais,
-          aes(fill = percentual),
-          color = "white",
-          size = 0.2,
-          na.rm = FALSE) +
-  
-  # Coordenadas ajustadas com X e Y (para garantir corte certo)
-  coord_sf(
-    xlim = c(-42, -39.5),
-    ylim = c(-21.5, -18.5),
-    expand = FALSE
-  ) +
-  
-  # Escala de preenchimento
-  scale_fill_distiller(
-    palette = "Reds",
-    name = "% Registros",
-    direction = 1,
-    na.value = "white"
-  ) +
-  
-  # Títulos e legenda
-  labs(
-    title = "Distribuição percentual por município",
-    subtitle = "Espírito Santo",
-    fill = "% registros"
-  ) +
-  
-  # Tema customizado
-  theme_minimal() +
-  theme(
-    panel.border = element_rect(colour = "black", fill = NA, size = 0.4),
-    panel.background = element_rect(fill = '#E5E5E5'),
-    legend.position = c(0.85, 0.2),
-    legend.background = element_rect(size = 0.1, linetype = "solid", colour = "black"),
-    legend.margin = margin(r = 2, l = 2, t = 2, b = 2),
-    axis.text = element_blank(),
-    axis.ticks = element_blank()
-  )
+# # Mapa ajustado
+# ggplot() +
+#   geom_sf(data = quantidade_registros_municipais,
+#           aes(fill = percentual),
+#           color = "white",
+#           size = 0.2,
+#           na.rm = FALSE) +
+#   
+#   # Coordenadas ajustadas com X e Y (para garantir corte certo)
+#   coord_sf(
+#     xlim = c(-42, -39.5),
+#     ylim = c(-21.5, -18.5),
+#     expand = FALSE
+#   ) +
+#   
+#   # Escala de preenchimento
+#   scale_fill_distiller(
+#     palette = "Reds",
+#     name = "% Registros",
+#     direction = 1,
+#     na.value = "white"
+#   ) +
+#   
+#   # Títulos e legenda
+#   labs(
+#     title = "Distribuição percentual por município",
+#     subtitle = "Espírito Santo",
+#     fill = "% registros"
+#   ) +
+#   
+#   # Tema customizado
+#   theme_minimal() +
+#   theme(
+#     panel.border = element_rect(colour = "black", fill = NA, size = 0.4),
+#     panel.background = element_rect(fill = '#E5E5E5'),
+#     legend.position = c(0.85, 0.2),
+#     legend.background = element_rect(size = 0.1, linetype = "solid", colour = "black"),
+#     legend.margin = margin(r = 2, l = 2, t = 2, b = 2),
+#     axis.text = element_blank(),
+#     axis.ticks = element_blank()
+#   )
 
