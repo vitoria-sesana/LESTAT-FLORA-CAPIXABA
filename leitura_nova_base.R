@@ -1,31 +1,21 @@
-require(data.table)
-require(dplyr)
 
-# leitura -----------------------------------------------------------------
-# caminho <- "bases/Flora_final.parquet"
-# 
-# base <- 
-#   arrow::read_parquet(caminho) %>% 
-#   janitor::clean_names() %>% 
-#   as.data.table()
+base <- read.csv("bases/Faceta-2025-12-14.csv")
 
-caminho <- "Flora_final.xlsx"
 
-base <- 
-  readxl::read_xlsx(caminho) %>% 
+base_tratado <- 
+  base %>% 
   janitor::clean_names() %>% 
   as.data.table()
 
-# filtrando pelas Tracheophyta
-flora <- base[ phylum == "Tracheophyta"]
+
+flora <- base_tratado[ phylum == "Tracheophyta"]
 
 # definindo a quantidade de casas decimais
-base[, lat_r := round(latitude, 6)]
-base[, lon_r := round(longitude, 6)]
+flora[, lat_r := round(decimal_latitude, 3)]
+flora[, lon_r := round(decimal_longitude, 3)]
 
 # agrupando e quantificando as duplicadas de acordo com as covariáveis
-base_agrupada <- base[,.(qntd=.N), by = .(collection, family, lat_r, lon_r)] 
-base_agrupada <- base[,.(qntd=.N), by = .(collection, family, latitude, longitude)] 
+base_agrupada <- flora[,.(qntd=.N), by = .(lat_r, lon_r, family, genus, species, year)] 
 
 # observações que possuem 2 ou mais ocorrências
 duplicadas <- 
@@ -40,6 +30,3 @@ print(paste("Frequência de pontos com 2 ou mais ocorrências:", sum(duplicadas$
 print(paste("Quantidade de observações a serem deletadas:", sum(duplicadas$qntd) - length(duplicadas$family)))
 print(paste("Quantidade de observações restantes:", nrow(flora) - (sum(duplicadas$qntd) - length(duplicadas$family))))
 
-
-# saídas ------------------------------------------------------------------
-openxlsx::write.xlsx(duplicadas, 'duplicadas.xlsx')
